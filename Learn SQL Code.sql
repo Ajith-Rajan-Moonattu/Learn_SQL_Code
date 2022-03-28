@@ -1,5 +1,5 @@
 
------------------------------------LEARN SQL------------------------------------------------------
+                              -----------------------------------LEARN SQL------------------------------------------------------
 
 --Comparison Operators
 
@@ -80,7 +80,7 @@ Logical Operators
 
 SELECT *
 FROM customers
-WHERE customers = ‘Germany‘
+WHERE customers = â€˜Germanyâ€˜
 
 _AND_
 --Find all customers who come from Germany AND whose
@@ -88,7 +88,7 @@ _AND_
 
 SELECT *
 FROM customers
-WHERE country = ‘Germany‘
+WHERE country = â€˜Germanyâ€˜
 AND score <= 400
 
 --Find all customers whose first name contains r
@@ -98,11 +98,11 @@ AND score <= 400
 
 SELECT *
 FROM customers
-WHERE first_name LIKE ‘%r%‘
+WHERE first_name LIKE â€˜%r%â€˜
 
 SELECT *
 FROM customers
-WHERE country = ‘Germany‘
+WHERE country = â€˜Germanyâ€˜
 OR score < 400
 
 NOT
@@ -112,7 +112,7 @@ NOT
 
 SELECT *
 FROM customers
-WHERE first_name LIKE ‘__r%‘
+WHERE first_name LIKE â€˜__r%â€˜
 
 --Find all customers whose score is NOT less than 400
 
@@ -146,13 +146,13 @@ LIKE
 
 SELECT *
 FROM customers
-WHERE first_name LIKE ‘M%‘
+WHERE first_name LIKE â€˜M%â€˜
 
 --Find all customers whose first name ends with n
 
 SELECT *
 FROM customers
-WHERE first_name LIKE ‘%n‘
+WHERE first_name LIKE â€˜%nâ€˜
 
 ALIASES
 Columns
@@ -301,7 +301,7 @@ List all customer names, where the name is combination
 of first name and last name
 
 SELECT
-CONCAT(first_name,‘-‘,lastname) AS
+CONCAT(first_name,â€˜-â€˜,lastname) AS
 customer_name
 FROM customers
 
@@ -396,13 +396,13 @@ Insert new customer Anna Nixon from UK
 
 INSERT INTO customers
 (first_name, last_name, country)
-VALUES (‘Anna‘,‘Nixon‘,‘UK‘)
+VALUES (â€˜Annaâ€˜,â€˜Nixonâ€˜,â€˜UKâ€˜)
 
 UPDATE
 --Change the country of customer ID 7 to Germany
 
 UPDATE customers
-SET country = ‘Germany‘
+SET country = â€˜Germanyâ€˜
 WHERE customer_id = 7
 
 CREATE TABLE persons (
@@ -420,7 +420,7 @@ phone VARCHAR(15) NOT NULL UNIQUE
 Add new column called email to table Persons
 
 UPDATE customers
-SET country = ‘USA‘,
+SET country = â€˜USAâ€˜,
 country = 100
 WHERE customer_id = 6
 
